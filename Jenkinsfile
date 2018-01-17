@@ -7,4 +7,6 @@ stage('Demo') {
 
   sayHello 'Dave'
 
+  gradleBuild 'java'
+
 }
