@@ -1,5 +1,5 @@
 
-library 'jenkins-sharedlibrary'
+@Library('jenkins-sharedlibrary')_
 
 pipeline {
   agent any
@@ -10,7 +10,7 @@ pipeline {
   }
   tools {
     jdk 'Oracle JDK 1.8'
-    gradle 'Gradle 3.5'
+    gradle 'Gradle 4.0'
   }
   stages {
 
