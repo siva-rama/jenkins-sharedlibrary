@@ -14,18 +14,11 @@ pipeline {
   }
   stages {
 
-	stage('Demo') {
+	stage('Shared Library - Pipeline Flow') {
 
   		echo 'Hello World'
 
   		sayHello 'Raju'
-
-		}
-
-
-	stage('Build') {
-
-  		echo 'Starting build'
 
   		gradleBuild 'java'
 
