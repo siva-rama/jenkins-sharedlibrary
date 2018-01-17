@@ -1,6 +1,10 @@
+
 library 'jenkins-sharedlibrary'
 
 stage('Demo') {
-    echo 'Hello world'
-    sayHello 'Dave'
+
+  echo 'Hello World'
+
+  sayHello 'Dave'
+
 }
