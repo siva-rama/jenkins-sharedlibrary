@@ -2,5 +2,5 @@
 
 def call(String name = 'java') {
   echo "Starting ${name} build..."
-  sh "gradle clean"
+  sh "gradle --version"
 }

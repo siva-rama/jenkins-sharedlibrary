@@ -9,7 +9,7 @@ stage('Shared Library - Pipeline Flow') {
 
   		sayHello 'Raju'
 
-  		gradleBuild 'java'
+  		gradleBuild()
 
 		}
 }
