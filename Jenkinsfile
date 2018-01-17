@@ -1,4 +1,4 @@
-@Library('siva-rama/jenkins-sharedlibrary')_
+@Library('jenkins-sharedlibrary')_
 stage('Demo') {
     echo 'Hello world'
     sayHello 'Dave'
