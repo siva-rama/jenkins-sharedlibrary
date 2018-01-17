@@ -10,5 +10,3 @@ stage('Shared Library - Pipeline Flow') {
   		gradleBuild 'java'
 
 		}
-	}
-}
