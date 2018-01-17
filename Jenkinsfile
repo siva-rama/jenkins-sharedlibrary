@@ -1,6 +1,8 @@
 
 @Library('jenkins-sharedlibrary')_
 
+node {
+
 stage('Shared Library - Pipeline Flow') {
 
   		echo 'Hello World'
@@ -10,3 +12,4 @@ stage('Shared Library - Pipeline Flow') {
   		gradleBuild 'java'
 
 		}
+}
