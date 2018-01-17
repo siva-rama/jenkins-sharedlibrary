@@ -1,5 +1,5 @@
 
-library 'jenkins-sharedlibrary'
+library 'siva-rama/jenkins-sharedlibrary'
 
 stage('Demo') {
 
