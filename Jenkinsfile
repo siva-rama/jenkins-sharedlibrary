@@ -10,6 +10,7 @@ stage('Shared Library - Pipeline Flow') {
   		sayHello 'Everyone'
 
   		gradleBuild()
+		standardPipeline()
 
 		}
 }
