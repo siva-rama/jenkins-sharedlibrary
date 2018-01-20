@@ -7,7 +7,7 @@ stage('Shared Library - Pipeline Flow') {
 
   		echo 'Hello World'
 
-  		sayHello 'Raju'
+  		sayHello 'Everyone'
 
   		gradleBuild()
 
