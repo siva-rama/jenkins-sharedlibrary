@@ -10,10 +10,10 @@ stage('Shared Library - Pipeline Flow') {
   		sayHello 'Everyone'
 
   		gradleBuild()
-	standardPipeline{
-		projectName = "Project1"
-    		serverDomain = "Project1 Server Domain"	
-	}
-
+	
+		standardPipeline{
+			projectName = "Project1"
+    			serverDomain = "Project1 Server Domain"	
 		}
+	}
 }
