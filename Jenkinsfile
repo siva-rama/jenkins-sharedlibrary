@@ -16,7 +16,7 @@
     		serverDomain = "Project1 Server Domain"
     		publishtoartifactory = "true"
     		artifactoryRepokey = "gradle-dev-local"
-    		sonarqubescan = "true"
+    		sonarqubescan = "false"
     		sonarqubeServer = "10.235.10.86"
 		}
 //	}
