@@ -27,8 +27,10 @@ def call(body) {
                         sh "echo 'shell scripts to run integration tests...'"
                     }
                 }
-                stage ('Publish to SonarQube') {
+                if (config.sonarqubescan == true) {
+                    stage ('Publish to SonarQube') {
                     sh "echo 'deploying to SonarQube server ${config.sonarqubeServer}...'"
+                } 
                 }
                 stage ('Publish to Artifactory') {
                     sh "echo 'deploying to Artifactory with key ${config.artifactoryRepokey}...'"
