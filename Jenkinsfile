@@ -1,9 +1,9 @@
 
 @Library('jenkins-sharedlibrary')_
 
-node {
+//node {
 
-stage('Shared Library - Pipeline Flow') {
+//stage('Shared Library - Pipeline Flow') {
 		
   	//	echo 'Hello World'
 
@@ -17,5 +17,5 @@ stage('Shared Library - Pipeline Flow') {
     		artifactoryRepokey = "gradle-dev-local"
     		sonarqubeServer = "10.235.10.86"
 		}
-	}
-}
+//	}
+//}
