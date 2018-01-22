@@ -5,11 +5,11 @@ node {
 
 stage('Shared Library - Pipeline Flow') {
 		
-  		echo 'Hello World'
+  	//	echo 'Hello World'
 
-  		sayHello 'Everyone'
+  	//	sayHello 'Everyone'
 
-  		gradleBuild()
+  	//	gradleBuild()
 	
 		standardPipeline{
 			projectName = "Project1"
