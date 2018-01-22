@@ -4,12 +4,16 @@
 node {
 
 stage('Shared Library - Pipeline Flow') {
-
+		
   		echo 'Hello World'
 
-  		sayHello 'Raju'
+  		sayHello 'Everyone'
 
   		gradleBuild()
-
+	
+		standardPipeline{
+			projectName = "Project1"
+    			serverDomain = "Project1 Server Domain"	
 		}
+	}
 }
