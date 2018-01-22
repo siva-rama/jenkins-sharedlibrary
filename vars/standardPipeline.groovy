@@ -28,10 +28,10 @@ def call(body) {
                     }
                 }
                 stage ('Publish to SonarQube') {
-                    sh "echo 'deploying to SonarQube server ${config.sonarqubeserver}...'"
+                    sh "echo 'deploying to SonarQube server ${config.sonarqubeServer}...'"
                 }
                 stage ('Publish to Artifactory') {
-                    sh "echo 'deploying to Artifactory with key ${config.artifactoryrepokey}...'"
+                    sh "echo 'deploying to Artifactory with key ${config.artifactoryRepokey}...'"
                 }
                 stage ('Deploy') {
                     sh "echo 'deploying to server ${config.serverDomain}...'"

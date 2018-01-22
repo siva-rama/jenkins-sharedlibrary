@@ -3,6 +3,6 @@
 standardPipeline {
     projectName = "Project1"
     serverDomain = "Project1 Server Domain"
-    artifactoryrepokey = "gradle-dev-local"
-    sonarqubeserver = "10.235.10.86"
+    artifactoryRepokey = "gradle-dev-local"
+    sonarqubeServer = "10.235.10.86"
     }
