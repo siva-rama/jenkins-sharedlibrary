@@ -15,7 +15,6 @@ def call(body) {
                 }
                 stage ('Build') {
                     sh "echo 'building ${config.projectName} ...'"
-                    sh "echo config.projectName"
                 }
                 stage ('Tests') {
                     parallel 'static': {
@@ -29,7 +28,7 @@ def call(body) {
                     }
                 }
                 stage ('Publish to SonarQube') {
-                    sh "echo 'deploying to SonarQube ${config.sonarqubeserver}...'"
+                    sh "echo 'deploying to SonarQube server ${config.sonarqubeserver}...'"
                 }
                 stage ('Publish to Artifactory') {
                     sh "echo 'deploying to Artifactory with key ${config.artifactoryrepokey}...'"
