@@ -30,9 +30,9 @@ def call(body) {
                     }
                 }
                 stage ('Publish to SonarQube') {
-                    def sonarquberun = "${config.sonarqubescan}"
+                    sh "echo '${config.sonarqubescan}'"
 
-                    if (sonarquberun == true) {
+                    if (sonarqubescan == true) {
                     sh "echo 'deploying to SonarQube server ${config.sonarqubeServer}...'"
                     } else {
                         sh "echo 'Not enabled..'"
