@@ -33,7 +33,7 @@ def call(body) {
                     sh "echo '${config.sonarqubescan}'"
                     sh "echo '${config.branch}'"
 
-                    if (config.sonarqubescan == true && config.branch == 'master|develop') {
+                    if (config.sonarqubescan == true && config.branch == "master|develop") {
                     sh "echo 'publishing reports to SonarQube server ...'"
                     } else {
                         sh "echo 'Not enabled..'"
@@ -43,7 +43,7 @@ def call(body) {
                 stage ('Publish to Artifactory') {
                     sh "echo '${config.artifactoryRepokey}'"
 
-                    if (config.branch == 'master|develop'){
+                    if (config.branch == "master|develop"){
                         sh "echo 'deploying to Artifactory with key ${config.artifactoryRepokey}...'"
                     } else {
                         sh "echo 'It is not a master or develop branch'"
