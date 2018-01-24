@@ -15,6 +15,7 @@ def call(body) {
                 }
                 stage ('Build') {
                     sh "echo 'building ${config.projectName} ...'"
+                    sh "gradle clean build"
                 }
                 stage ('Tests') {
                     parallel 'static': {
@@ -22,6 +23,7 @@ def call(body) {
                     },
                     'unit': {
                         sh "echo 'shell scripts to run unit tests...'"
+                        sh "gradle test"
                     },
                     'integration': {
                         sh "echo 'shell scripts to run integration tests...'"
@@ -30,7 +32,10 @@ def call(body) {
                 stage ('Publish to SonarQube') {
                     if (config.sonarqubescan == true) {
                     sh "echo 'deploying to SonarQube server ${config.sonarqubeServer}...'"
+                    } else {
+                        sh "echo 'Not enabled..'"
                     }
+
                 }
                 stage ('Publish to Artifactory') {
                     sh "echo 'deploying to Artifactory with key ${config.artifactoryRepokey}...'"
