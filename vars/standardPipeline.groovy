@@ -15,7 +15,7 @@ def call(body) {
                 }
                 stage ('Build') {
                     sh "echo 'building ${config.projectName} ...'"
-                    sh "gradle clean build"
+                    
                 }
                 stage ('Tests') {
                     parallel 'static': {
@@ -23,7 +23,7 @@ def call(body) {
                     },
                     'unit': {
                         sh "echo 'shell scripts to run unit tests...'"
-                        sh "gradle test"
+                        
                     },
                     'integration': {
                         sh "echo 'shell scripts to run integration tests...'"
