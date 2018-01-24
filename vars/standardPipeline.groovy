@@ -33,7 +33,7 @@ def call(body) {
                     sh "echo '${config.sonarqubescan}'"
 
                     if (config.sonarqubescan == true) {
-                    sh "echo 'deploying to SonarQube server ${config.sonarqubeServer}...'"
+                    sh "echo 'deploying to SonarQube server ...'"
                     } else {
                         sh "echo 'Not enabled..'"
                     }
