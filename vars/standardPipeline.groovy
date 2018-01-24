@@ -32,7 +32,7 @@ def call(body) {
                 stage ('Publish to SonarQube') {
                     sh "echo '${config.sonarqubescan}'"
 
-                    if (sonarqubescan == true) {
+                    if (config.sonarqubescan == true) {
                     sh "echo 'deploying to SonarQube server ${config.sonarqubeServer}...'"
                     } else {
                         sh "echo 'Not enabled..'"
