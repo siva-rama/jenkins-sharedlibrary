@@ -31,16 +31,24 @@ def call(body) {
                 }
                 stage ('Publish to SonarQube') {
                     sh "echo '${config.sonarqubescan}'"
+                    sh "echo '${config.branch}'"
 
-                    if (config.sonarqubescan == true && config.branch == 'master') {
-                    sh "echo 'deploying to SonarQube server ...'"
+                    if (config.sonarqubescan == true && config.branch == 'master|develop') {
+                    sh "echo 'publishing reports to SonarQube server ...'"
                     } else {
                         sh "echo 'Not enabled..'"
                     }
 
                 }
                 stage ('Publish to Artifactory') {
-                    sh "echo 'deploying to Artifactory with key ${config.artifactoryRepokey}...'"
+                    sh "echo '${config.artifactoryRepokey}'"
+
+                    if (config.branch == 'master|develop'){
+                        sh "echo 'deploying to Artifactory with key ${config.artifactoryRepokey}...'"
+                    } else {
+                        sh "echo 'It is not a master or develop branch'"
+                    }
+                    
                 }
                 stage ('Deploy') {
                     sh "echo 'deploying to server ${config.serverDomain}...'"
