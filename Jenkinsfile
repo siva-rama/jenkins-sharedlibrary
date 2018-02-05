@@ -14,7 +14,7 @@ final String PUBLISH_ARTIFACTS = 'true'
 final String TEAM_EMAIL_LIST = ''
 
 //node {
-
+//
 //stage('Shared Library - Pipeline Flow') {
 		
   	//	echo 'Hello World'
